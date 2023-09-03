@@ -1,15 +1,20 @@
----
----
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+  </head>
+  <body>
+    <h1>Reader App</h1>
+    <form hx-get="/article" hx-target="#outlet" hx-swap="innerHTML">
+      <input type="url" name="url" id="url" />
+      <button type="submit" >Click Me</button>
+    </form>
+	  <hr />
+    <div id="outlet" />
+  </body>
 </html>
