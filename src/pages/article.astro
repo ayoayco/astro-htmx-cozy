@@ -1,13 +1,13 @@
 ---
 import { extract } from "@extractus/article-extractor";
 // const url = 'https://daverupert.com/2023/08/quick-thoughts-on-chips/';
-const url = Astro.url.searchParams.get('url');
+const url = Astro.url.searchParams.get("url");
 // const article = await extract(url);
 // const { content, title, author } = article;
 console.log(url);
 ---
+
 <!-- <h2>{title}</h2>
 <span>by {author}</span>
 <content set:html={content} /> -->
 <div>{url}</div>
-hey
